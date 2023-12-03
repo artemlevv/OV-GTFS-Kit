@@ -21,3 +21,30 @@ dependencies: [
     .package(url: "https://github.com/artemlevv/OV-GTFS-Kit.git", .upToNextMajor(from: "0.0.2"))
 ]
 ```
+
+## Quick Start
+
+### Static GTFS
+```swift
+let staticGTFS = try GTFS(path: folderPath)
+```
+Initialization of static GTFS data. Put here `folderPath` which is path folder to yout static GTFS data. 
+
+### Realtime GTFS
+```swift
+let realtimeGTFS = try GTFSRealtime_FeedMessage(serializedData: fetchData())
+```
+Initialization of realtime GTFS data, where `fetchData()` is function which return data from GET request 
+
+### Map Annotations 
+```swift
+mapView.addStopAnnotations(gtfs: staticGTFS)
+```
+Adding stops of public transport to `MKMapView`. Also you can add here custom image of stops. 
+
+```swift
+mapView.addVehicleAnnotations(gtfs: staticGTFS, gtfs_realtime: realtimeGTFS)
+```
+Adding vehicles to `MKMapView`. Also you can add here custom image of vehicle. To keep vehicle positions updated, update real-time GTFS data. 
+
+
