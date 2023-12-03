@@ -1,11 +1,11 @@
 # OV-GTFS-Kit
 
-- [Description] (#description)
-- [Installation] (#installation)
-- [Quick Start] (#quick-start)
-  - [Static GTFS] (#static-gtfs)
-  - [Realtime GTFS] (#realtime-gtfs)
-  - [Map Annotations] (#map-annotations)
+- [Description](#description)
+- [Installation](#installation)
+- [Quick Start](#quick-start)
+  - [Static GTFS](#static-gtfs)
+  - [Realtime GTFS](#realtime-gtfs)
+  - [Map Annotations](#map-annotations)
   
 ## Description
 
