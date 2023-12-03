@@ -1,5 +1,19 @@
 # OV-GTFS-Kit
 
+- [Description] (#description)
+- [Installation] (#installation)
+- [Quick Start] (#quick-start)
+  - [Static GTFS] (#static-gtfs)
+  - [Realtime GTFS] (#realtime-gtfs)
+  - [Map Annotations] (#map-annotations)
+  
+## Description
+
+OV-GTFS-Kit is a comprehensive framework designed to simplify the handling of General Transit Feed Specification (GTFS) data, catering to both static and real-time datasets. This versatile library empowers developers to seamlessly work with GTFS data, facilitating efficient integration of public transportation information into applications.
+
+The framework excels in working with both static GTFS schedules and real-time updates, offering a unified solution for working with diverse transit data sources. By providing a streamlined interface, OV-GTFS-Kit enables developers to effortlessly incorporate public transport overlays and annotations onto maps, enhancing the visualization of transit networks.
+
+
 ## Installation
 
 ### CocoaPods
@@ -46,5 +60,10 @@ Adding stops of public transport to `MKMapView`. Also you can add here custom im
 mapView.addVehicleAnnotations(gtfs: staticGTFS, gtfs_realtime: realtimeGTFS)
 ```
 Adding vehicles to `MKMapView`. Also you can add here custom image of vehicle. To keep vehicle positions updated, update real-time GTFS data. 
+
+```swift
+func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView?
+```
+For annotations to be displayed correctly, add the MKMapViewDelegate
 
 
